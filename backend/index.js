@@ -11,6 +11,10 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Default Route
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
 // Routes
 app.use("/api/auth", require('./routes/userroutes'));
 app.use("/api/messages", require('./routes/messagesroutes'));
