@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 app.use(cors({
     origin: process.env.Frontend_URL, // Change this to the frontend URL
     credentials: true,
-
+    useUnifiedTopology: true
 }));
 app.use(express.json());
 
